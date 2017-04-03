@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BerkeleyTCPClientDemo.c" />
+    <ClCompile Include="BerkeleyTCPServerDemo.c" />
+    <ClCompile Include="BerkeleyUDPClientDemo.c" />
+    <ClCompile Include="CustomHTTPApp.c" />
+    <ClCompile Include="CustomSSLCert.c" />
+    <ClCompile Include="GenericTCPClient.c" />
+    <ClCompile Include="GenericTCPServer.c" />
+    <ClCompile Include="HTTP2_MDD.c" />
+    <ClCompile Include="MainDemo.c" />
+    <ClCompile Include="PingDemo.c" />
+    <ClCompile Include="SMTPDemo.c" />
+    <ClCompile Include="UARTConfig.c" />
+    <ClCompile Include="WF_Config.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FSconfig.h" />
+    <ClInclude Include="HardwareProfile.h" />
+    <ClInclude Include="HTTPPrint.h" />
+    <ClInclude Include="MainDemo.h" />
+    <ClInclude Include="mib.h" />
+    <ClInclude Include="TCPIPConfig.h" />
+    <ClInclude Include="WF_Config.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F63212A2-8E16-4177-BB40-6575586FB6C5}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <OutDir>$(SolutionDir)build\</OutDir>
+    <IntDir>build\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>
+    </NMakePreprocessorDefinitions>
+    <ExecutablePath />
+    <IncludePath />
+    <ReferencePath />
+    <LibraryPath />
+    <SourcePath />
+    <ExcludePath />
+    <NMakeIncludeSearchPath>.;..\..\STM\STM32VLDISCOVERY;..\..\STM\CMSIS\CM3\DeviceSupport;..\..\STM\STM32F10x_StdPeriph_Driver\inc;..\..\Microchip\Include;C:\Keil\ARM\RV31\INC</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>build.bat build</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>build.bat rebuild</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>build.bat clean</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
